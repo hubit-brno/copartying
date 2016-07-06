@@ -14,7 +14,7 @@ export function handleRender(req, res) {
   console.log(' [x] Request for', req.url);
   eventService.getEvents()
   .then(initialEvents => {
-    let initialState = {pulseApp: { events: initialEvents, userId: 'baseUser'} };
+    let initialState = {app: { events: initialEvents, userId: 'baseUser'} };
 
     const store = configureStore(req, initialState);
 

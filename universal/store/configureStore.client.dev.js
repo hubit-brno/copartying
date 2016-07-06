@@ -4,14 +4,14 @@ import createLogger from 'redux-logger';
 import { routerReducer } from 'react-router-redux';
 import DevTools from '../containers/devTools';
 
-import pulseApp from '../reducers';
+import app from '../reducers';
 
 // Grab the state from a global injected into server-generated HTML
 const initialState = window.__INITIAL_STATE__;
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  pulseApp
+  app
 });
 
 
@@ -31,7 +31,7 @@ if (module.hot) {
   module.hot.accept('../reducers', () =>
     store.replaceReducer(combineReducers({
       routing: routerReducer,
-      pulseApp: require('../reducers')
+      app: require('../reducers')
     }))
   );
 };
