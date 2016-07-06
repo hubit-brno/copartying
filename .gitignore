@@ -3,4 +3,5 @@ dist
 build
 config/local.json
 rethinkdb_data
+universal/3rdParty.js
 copartying.sublime*
