@@ -1,15 +1,16 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import PulseApp from './containers/PulseApp';
-import MyEvents from './containers/MyEvents';
+import CopartyingApp from './containers/CopartyingApp';
 
-import OtherEvents from './containers/OtherEvents';
+const NoMatch = () => {
+	return (
+		<div>URL Not found. Check the router config.</div>
+	);
+};
 
 export default (
-  <Route path='/' component={PulseApp}>
-    <IndexRoute components={{myEvents: MyEvents, otherEvents: OtherEvents}} />
-    <Route path='my-events' components={{myEvents: MyEvents}} />
-    <Route path='other-events' components={{otherEvents: OtherEvents}} />
+  <Route path="/" component={ CopartyingApp }>
+    <Route path="*" component={ NoMatch }/>
   </Route>
 );
