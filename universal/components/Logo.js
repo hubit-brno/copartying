@@ -1,0 +1,13 @@
+import React, { PropTypes, Component } from 'react';
+
+class Logo extends Component {
+
+  render() {
+    return (
+      <h1>Copartying</h1>
+    );
+  }
+
+}
+
+export default Logo;
