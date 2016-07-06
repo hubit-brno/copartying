@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
-import pulses from './pulse';
+// import { combineReducers } from 'redux';
+import copartying from './copartying';
 
 // const rootReducer = combineReducers({
-//   pulses
+//   copartying
 // });
 
-export default pulses;
+export default copartying;
