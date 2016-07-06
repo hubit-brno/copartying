@@ -4,11 +4,11 @@ import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import { getOrSetUserId } from './UserId';
-import { setupRealtime } from './Realtime';
+// import { setupRealtime } from './Realtime';
 
 import routes from '../universal/routes';
 import store from '../universal/store';
-import * as actions from '../universal/actions/PulseActions';
+import { setUserId } from '../universal/actions/UserActions';
 
 import Root from '../universal/containers/root';
 
@@ -24,7 +24,7 @@ ReactDOM.render(
 );
 
 // Now that we have rendered...
-setupRealtime(store, actions);
+// setupRealtime(store, actions);
 
 // lets mutate state and set UserID as key from local storage
-store.dispatch(actions.setUserId(getOrSetUserId()));
+store.dispatch(setUserId(getOrSetUserId()));
