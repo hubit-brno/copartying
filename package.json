@@ -29,10 +29,11 @@
     "body-parser": "1.14.x",
     "classnames": "2.2.x",
     "config": "1.19.x",
+    "crypto": "0.0.3",
     "ejs": "2.3.x",
     "express": "4.13.x",
     "history": "1.13.x",
-    "moment": "2.11.x",
+    "moment": "^2.11.2",    
     "nib": "^1.1.x",
     "node-uuid": "1.4.x",
     "react": "15.0.x",
@@ -48,6 +49,7 @@
     "socket.io": "1.4.x",
     "socket.io-client": "1.4.x",
     "superagent": "1.8.x",
+    "validate.js": "^0.10.0",
     "xss": "0.2.x"
   },
   "devDependencies": {

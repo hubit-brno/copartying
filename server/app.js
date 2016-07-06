@@ -3,10 +3,27 @@ import ReactDOMServer from 'react-dom/server';
 import { Provider } from 'react-redux';
 import { RouterContext, match } from 'react-router';
 
-import * as eventService from './api/service/event';
+import * as copartyService from './api/service/coparty';
 import configureStore from '../universal/store';
 import routes from '../universal/routes';
 import DevTools from '../universal/containers/devTools';
+import validate from 'validate.js';
+
+import moment from 'moment';
+
+validate.validators.array = function (value, attributes, attributeName, options, constraints) {
+  if (value === undefined || validate.isArray(value)) {
+    return null;
+  }
+  return 'must be array or null';
+};
+
+validate.validators.isoDate = function (value, attributes, attributeName, options, constraints) {
+  if (value === undefined || moment(value).isValid()) {
+    return null;
+  }
+  return 'must be a date in ISO-8601 format';
+};
 
 const isDev = (process.env.NODE_ENV !== 'production');
 

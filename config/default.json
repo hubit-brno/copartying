@@ -1,12 +1,13 @@
 {
   "rethinkdb": {
-    "host": "localhost",
-    "port": 28015,
-    "db": "pulse"
+    "host": "192.168.99.100",
+    "port": 32769,
+    "db": "copartying"
   },
   "express": {
     "host": "localhost",
     "port": 3000
   },
+  "securityString": "topSecretString9812!",
   "buildDirectory": "build"
 }
