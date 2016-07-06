@@ -15,6 +15,7 @@ import Root from '../universal/containers/root';
 import '../style/pure.css';
 import '../style/main.styl';
 import '../style/spinner.styl';
+import '../style/copartying.css';
 
 const history = syncHistoryWithStore(browserHistory, store);
 

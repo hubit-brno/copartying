@@ -1,0 +1,9 @@
+.ui.description .text.collapsed {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.ui.location {
+	display: flex;
+}
