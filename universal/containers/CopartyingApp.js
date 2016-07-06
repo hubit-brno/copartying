@@ -9,6 +9,8 @@ import Description from '../components/Description';
 import DateTime from '../components/DateTime';
 import Location from '../components/Location';
 import Organizer from '../components/Organizer';
+import Attendees from '../components/Attendees';
+import RSVP from '../components/RSVP';
 
 
 import { loadVenueDetail } from '../actions/FourSquareActions';
@@ -30,6 +32,56 @@ class CopartyingApp extends Component {
       }
     };
 
+    const attendees = [
+      {
+        name: 'Connie Delgado',
+        initials: 'CD'
+      },
+      {
+        name: 'Aaron Brock',
+        initials: 'AB'
+      },
+      {
+        name: 'Cameron Goodwin',
+        initials: 'CG'
+      },
+      {
+        name: 'Jacob Harper',
+        initials: 'JH'
+      },
+      {
+        name: 'Ramiro Buchanan',
+        initials: 'RB'
+      },
+      {
+        name: 'Marcella West',
+        initials: 'MW'
+      },
+      {
+        name: 'Henry Pena',
+        initials: 'HP'
+      },
+      {
+        name: 'June Cummings',
+        initials: 'JC'
+      },
+      {
+        name: 'Lorena Adkins',
+        initials: 'LA'
+      },
+      {
+        name: 'Debra Rodriquez',
+        initials: 'DR'
+      }
+    ];
+
+    const rsvp = {
+      onNotGoing: () => { console.log('nope'); },
+      onAccepted: () => { console.log('mmmkey'); },
+      placesLeft: 10,
+      shouldHurry: false
+    };
+
     return (
       <div style={{ width: '640px' }}>
         <Logo />
@@ -39,6 +91,8 @@ class CopartyingApp extends Component {
         <DateTime dateTime="8.11.2016 ve 20:30"/>
         <Location { ...locationProps }/>
         <Organizer text="Impact Hub Brno"/>
+        <Attendees people={ attendees }/>
+        <RSVP { ...rsvp }/>
       </div>
     );
   }
